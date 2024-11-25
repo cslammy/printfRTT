@@ -15,7 +15,7 @@ int main() {
 
 SEGGER_RTT_Init(); 
 
-
+int x = 0;
 
 uint16_t t;
 t = add2nums(1000,100);
@@ -27,8 +27,8 @@ t = add2nums(1000,100);
         sleep_ms(t);
         gpio_put(LED_PIN, 0);
         sleep_ms(1000);
-       
-          SEGGER_RTT_printf(0, "test TerminalOut\n");
+          x++;
+          SEGGER_RTT_printf(0, "test TerminalOut: %d\n",x);
     }
 
 }
